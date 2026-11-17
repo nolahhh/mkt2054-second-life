@@ -1,6 +1,6 @@
 /* SECOND LIFE — MKT2054 Group 23. Editorial thrift system. */
 :root{
-  --cotton:#F4F1EA; --paper:#FBFAF6; --ink:#161513; --grey:#8C877D; --line:#DAD4C8; --line-2:#C9C2B4;
+  --cotton:#F4F1EA; --paper:#FBFAF6; --ink:#161513; --grey:#6B675F; --line:#DAD4C8; --line-2:#C9C2B4;
   --accent:#D9542B; --accent-ink:#B8431F; --denim:#3A5A85;
   --serif:"Instrument Serif",Georgia,serif; --sans:"Inter Tight",system-ui,sans-serif; --mono:"JetBrains Mono",ui-monospace,monospace;
   --max:1280px; --gut:clamp(16px,4vw,48px);
@@ -154,7 +154,11 @@ section{padding:clamp(80px,12vw,160px) 0}
 @media (max-width:640px){.chapters a{grid-template-columns:44px 1fr}.chapters .w{grid-column:2}}
 
 /* page header */
-.page-head{padding:160px 0 clamp(60px,8vw,110px);border-bottom:1px solid var(--ink)}
+.page-head{padding:160px 0 0}
+.page-head .wrap{padding-bottom:clamp(48px,6vw,80px);position:relative}
+.page-head .wrap::after{content:"";position:absolute;left:var(--gut);right:var(--gut);bottom:0;height:1px;background:var(--ink)}
+.page-head + section, .page-head + .wrap .case:first-child{padding-top:clamp(56px,7vw,96px)}
+.page-head + .wrap .case:first-child{border-top:0}
 .page-head h1{font-size:clamp(3.6rem,11vw,10rem);line-height:.86;letter-spacing:-.04em;margin:28px 0 36px}
 .page-head .row{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap}
 
@@ -218,7 +222,8 @@ section{padding:clamp(80px,12vw,160px) 0}
 
 /* references */
 .refs{border-top:1px solid var(--ink);counter-reset:r}
-.refs a{word-break:break-all;color:var(--ink);text-decoration-color:var(--line-2)}
+.refs a{overflow-wrap:anywhere;color:var(--grey);font-size:.88em;text-decoration-color:var(--line-2)}
+.sticky-head{position:sticky;top:110px}
 .refs li{list-style:none;padding:16px 0 16px 3em;text-indent:-3em;border-bottom:1px solid var(--line-2);font-size:.95rem}
 
 /* pager */
@@ -249,3 +254,4 @@ footer a{color:var(--cotton)}
   *,*::before,*::after{animation:none!important;transition:none!important}
   .hero h1 .line > span{transform:none}.rv{opacity:1;transform:none}html{scroll-behavior:auto}
 }
+
