@@ -218,6 +218,7 @@ section{padding:clamp(80px,12vw,160px) 0}
 
 /* references */
 .refs{border-top:1px solid var(--ink);counter-reset:r}
+.refs a{word-break:break-all;color:var(--ink);text-decoration-color:var(--line-2)}
 .refs li{list-style:none;padding:16px 0 16px 3em;text-indent:-3em;border-bottom:1px solid var(--line-2);font-size:.95rem}
 
 /* pager */
