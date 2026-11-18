@@ -255,3 +255,10 @@ footer a{color:var(--cotton)}
   .hero h1 .line > span{transform:none}.rv{opacity:1;transform:none}html{scroll-behavior:auto}
 }
 
+
+/* content pass 19 Nov */
+.photo .cap{max-width:calc(100% - 24px);text-align:left;line-height:1.5;text-transform:none;letter-spacing:.04em}
+.prose p{max-width:62ch}
+.prose p+p{margin-top:1.1em}
+.tagcard p.muted{line-height:1.6}
+.credits li{margin-bottom:10px}
