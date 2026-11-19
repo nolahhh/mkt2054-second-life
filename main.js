@@ -1,4 +1,4 @@
-// SECOND LIFE — shared nav, overlay menu, footer, reveal, count-up, bars, tag cursor.
+// SECOND LIFE · shared nav, overlay menu, footer, reveal, count-up, bars, tag cursor.
 (function () {
   const pages = [
     ["index.html", "Home"],
@@ -34,8 +34,8 @@
   const foot = document.createElement("footer");
   foot.innerHTML = `<div class="wrap">
       <div class="big">Second <em>Life.</em></div>
-      <div class="row"><span>MKT2054 Consumer Behaviour — Group 23, Tutorial 1</span>
-      <span>Sunway University — 2026</span>
+      <div class="row"><span>MKT2054 Consumer Behaviour · Group 23, Tutorial 1</span>
+      <span>Sunway University · 2026</span>
       <span><a href="recommendations.html#references">References &amp; image credits</a></span></div></div>`;
   document.body.append(foot);
 
