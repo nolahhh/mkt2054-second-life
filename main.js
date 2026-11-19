@@ -69,4 +69,19 @@
     loop();
     document.addEventListener("mouseover", (e) => c.classList.toggle("on", !!e.target.closest("a,button")));
   }
+
+  // read more: long paragraphs show 4 lines, full text on tap
+  document.querySelectorAll(".theory p.muted, .tagcard p.muted, .rec p.muted").forEach((p) => {
+    if (p.textContent.length < 420) return;
+    p.classList.add("clamp");
+    const b = document.createElement("button");
+    b.className = "more"; b.type = "button"; b.textContent = "Read more +";
+    b.setAttribute("aria-expanded", "false");
+    b.addEventListener("click", () => {
+      const open = p.classList.toggle("open");
+      b.textContent = open ? "Show less −" : "Read more +";
+      b.setAttribute("aria-expanded", open);
+    });
+    p.after(b);
+  });
 })();
