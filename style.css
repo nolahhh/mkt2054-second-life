@@ -284,3 +284,10 @@ footer a{color:var(--cotton)}
   -webkit-mask:linear-gradient(to top,#000 10%,transparent);mask:linear-gradient(to top,#000 10%,transparent)}
 @keyframes hbdrift{from{transform:translate3d(-2%,-1%,0) scale(1)}to{transform:translate3d(2%,1%,0) scale(1.06)}}
 @media (prefers-reduced-motion:reduce){.hb-glow{animation:none}}
+
+/* SDG block 19 Nov */
+.sdg-block{display:grid;grid-template-columns:minmax(160px,260px) 1fr;gap:clamp(24px,4vw,60px);align-items:center;border-top:1px solid var(--ink);padding-top:clamp(30px,4vw,50px)}
+.sdg-icon img{width:100%;display:block;border:1px solid var(--ink);box-shadow:8px 8px 0 var(--ink)}
+.sdg-title{font:400 clamp(1.8rem,3.2vw,2.6rem)/1.05 var(--serif);margin-top:10px}
+.sdg-t .size{background:#CF8D2A;color:#fff;border-color:#CF8D2A;width:auto;padding:0 10px;border-radius:20px}
+@media (max-width:700px){.sdg-block{grid-template-columns:1fr}.sdg-icon{max-width:200px}}
